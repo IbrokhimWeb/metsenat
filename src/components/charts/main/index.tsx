@@ -1,6 +1,6 @@
 //todo Import components
 import { FC } from "react";
-import Chart, { useChart } from "../../charts";
+import Chart, { useChart } from "../";
 import { formatNumber } from "../../../utils";
 
 interface CustomProps {
