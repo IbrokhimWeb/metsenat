@@ -63,7 +63,7 @@ export const MainChart: FC<CustomProps> = (props) => {
         }))}
         options={options}
         width="100%"
-        height="85%"
+        height="95%"
       />
     </div>
   );

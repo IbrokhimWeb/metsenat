@@ -47,11 +47,15 @@ const Login = () => {
 
   return (
     <main className="w-full h-screen flex flex-col items-center justify-center">
-      <img src="/images/login.svg" alt="Icon" className="my-10" />
+      <img
+        src="/images/login.svg"
+        alt="Icon"
+        className="w-80 my-10 max-md:w-72"
+      />
 
       <form
         onSubmit={handleSubmit}
-        className="w-96 bg-white p-[32px] rounded-[12px]"
+        className="w-96 bg-white p-[32px] rounded-[12px] max-md:w-80"
       >
         <h1 className="text-[24px] leading-[28px] font-bold mb-10">Kirish</h1>
         <Input
