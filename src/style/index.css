@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
+@font-face {
   font-family: SF-Pro-Display;
   src: url(/public/fonts/SF-Pro-Display-Bold.otf);
 }
 
 * {
   font-family: SF-Pro-Display !important;
-} */
+}
 
 body {
   background-color: #f5f5f7;

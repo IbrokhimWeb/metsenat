@@ -9,7 +9,7 @@ const Layout: FC<CustomProps> = ({ component: Component }) => {
   return (
     <div className="w-full h-screen">
       <Header />
-      <div className="w-full h-[90vh]">
+      <div className="w-full h-auto">
         <Component />
       </div>
     </div>
