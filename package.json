@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@google-cloud/recaptcha-enterprise": "^5.7.0",
+    "apexcharts": "^3.48.0",
     "axios": "^1.6.8",
     "flickity": "^3.0.0",
     "lodash": "^4.17.21",
