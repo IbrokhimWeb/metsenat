@@ -11,7 +11,6 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
-    "@google-cloud/recaptcha-enterprise": "^5.7.0",
     "apexcharts": "^3.48.0",
     "axios": "^1.6.8",
     "flickity": "^3.0.0",
@@ -19,10 +18,10 @@
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.22.3",
     "react-toastify": "^10.0.5",
-    "recaptcha-password-check-helpers": "^1.0.3",
     "sass": "^1.75.0",
     "uuid": "^9.0.1"
   },
@@ -31,6 +30,7 @@
     "@types/lodash": "^4.17.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/react-google-recaptcha": "^2.1.9",
     "@types/uuid": "^9.0.8",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
