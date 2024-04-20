@@ -23,7 +23,7 @@ const Chart = (options: any) => {
         shadeIntensity: 0,
         opacityFrom: 0.4,
         opacityTo: 0,
-        stops: [0, 100],
+        stops: [0, 0],
       },
     },
     dataLabels: { enabled: false },
@@ -46,7 +46,7 @@ const Chart = (options: any) => {
     },
     plotOptions: {
       bar: {
-        borderRadius: 1,
+        borderRadius: 6,
         columnWidth: "28%",
         borderRadiusApplication: "end",
         borderRadiusWhenStacked: "last",

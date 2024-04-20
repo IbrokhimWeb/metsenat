@@ -16,7 +16,10 @@
   font-family: SF-Pro-Display-Bold !important;
 }
 
-input::placeholder {
+input::placeholder,
+select,
+option,
+.medium-font {
   font-family: SF-Pro-Display-Medium !important;
 }
 
@@ -48,55 +51,57 @@ body {
   }
 }
 
-.my_chart .apexcharts-canvas {
-  & .apexcharts-tooltip {
-    color: "";
-    box-shadow: "";
-    border-radius: "";
+.my_chart {
+  .apexcharts-canvas {
+    & .apexcharts-tooltip {
+      color: "";
+      box-shadow: "";
+      border-radius: "";
 
-    & .apexcharts-theme-light {
+      & .apexcharts-theme-light {
+        border-color: transparent;
+      }
+    }
+
+    & .apexcharts-xaxistooltip {
       border-color: transparent;
+      color: "";
+      box-shadow: "";
+      border-radius: "";
+
+      &:before {
+        border-bottom-color: "";
+      }
+
+      &:after {
+        border-bottom-color: "";
+      }
     }
-  }
 
-  & .apexcharts-xaxistooltip {
-    border-color: transparent;
-    color: "";
-    box-shadow: "";
-    border-radius: "";
-
-    &:before {
-      border-bottom-color: "";
+    & .apexcharts-tooltip-title {
+      text-align: center;
+      font-weight: "";
+      background-color: #000;
+      color: "";
     }
 
-    &:after {
-      border-bottom-color: "";
+    & .apexcharts-legend {
+      padding: 0;
     }
-  }
 
-  & .apexcharts-tooltip-title {
-    text-align: center;
-    font-weight: "";
-    background-color: #000;
-    color: "";
-  }
+    & .apexcharts-legend-series {
+      display: inline-flex !important;
+      align-items: center;
+    }
 
-  & .apexcharts-legend {
-    padding: 0;
-  }
+    & .apexcharts-legend-marker {
+      margin-right: 8;
+    }
 
-  & .apexcharts-legend-series {
-    display: inline-flex !important;
-    align-items: center;
-  }
-
-  & .apexcharts-legend-marker {
-    margin-right: 8;
-  }
-
-  & .apexcharts-legend-text {
-    line-height: 18px;
-    text-transform: capitalize;
+    & .apexcharts-legend-text {
+      line-height: 18px;
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -105,18 +110,18 @@ body {
   position: relative;
   width: 80px;
   height: 80px;
-}
 
-.loader span {
-  position: absolute;
-  border: 4px solid #fff;
-  opacity: 1;
-  border-radius: 50%;
-  animation: AnimationLoader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
+  span {
+    position: absolute;
+    border: 4px solid #3366ff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: AnimationLoader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 
-.loader span:nth-child(2) {
-  animation-delay: -0.5s;
+    &:nth-child(2) {
+      animation-delay: -0.5s;
+    }
+  }
 }
 
 @keyframes AnimationLoader {
@@ -148,4 +153,60 @@ body {
     height: 72px;
     opacity: 0;
   }
+}
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+
+  li {
+    a {
+      padding: 0 5px;
+      min-width: 30px;
+      height: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #dfe3e8;
+      border-radius: 4px;
+
+      margin: 0 5px;
+      outline: none;
+      cursor: pointer;
+      color: #1d1d1f;
+      background-color: #ffffff;
+    }
+  }
+
+  .active {
+    a,
+    span,
+    a:hover,
+    span:hover a:focus,
+    span:focus {
+      border-color: #3366ff;
+      color: #3366ff;
+      outline: none;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+  margin-left: "10px";
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3366ff;
+  border-radius: 10px;
 }

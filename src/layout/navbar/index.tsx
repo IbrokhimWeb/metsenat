@@ -1,27 +1,32 @@
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const handleActive = ({ isActive }: { isActive: boolean }) => {
+    if (isActive) return { backgroundColor: "#3366FF", color: "#FFFFFF" };
+    return { color: "#3366FF9a" };
+  };
+
   return (
     <nav className="w-full flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-[860px]:gap-2 max-[860px]:flex-col-reverse">
       <section className="flex items-center justify-center">
         <NavLink
           to={"/"}
-          style={({ isActive }) => (isActive ? {} : {})}
-          className="text-[12px] px-14 py-2 rounded-l-md border border-r-0 font-medium border-[#3366ff7a] text-[#3366ff7a] max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
+          style={handleActive}
+          className="uppercase tracking-[1.13px] text-[12px] px-14 py-2 rounded-l-md border border-r-0 border-[#3366ff7a] font-medium max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
         >
           Dashboard
         </NavLink>
         <NavLink
           to={"/sponsors"}
-          style={({ isActive }) => (isActive ? {} : {})}
-          className="text-[12px] px-14 py-2 border font-medium border-[#3366ff7a] bg-blue-200 text-white max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
+          style={handleActive}
+          className="uppercase tracking-[1.13px] text-[12px] px-14 py-2 border border-[#3366ff7a] font-medium max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
         >
           Homiylar
         </NavLink>
         <NavLink
           to={"/students"}
-          style={({ isActive }) => (isActive ? {} : {})}
-          className="text-[12px] px-14 py-2 rounded-r-md border border-l-0 font-medium border-[#3366ff7a] text-[#3366ff7a] max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
+          style={handleActive}
+          className="uppercase tracking-[1.13px] text-[12px] px-14 py-2 rounded-r-md border border-l-0 font-medium border-[#3366ff7a] max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
         >
           Talabalar
         </NavLink>

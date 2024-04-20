@@ -11,7 +11,7 @@ const Layout: FC<CustomProps> = ({ component: Component }) => {
     <div className="w-full h-screen">
       <Header />
       <Navbar />
-      <section className="w-full py-10 px-40 max-xl:py-5 max-lg:px-10 max-md:px-5">
+      <section className="w-full min-h-[70vh] overflow-x-hidden py-10 px-40 max-xl:py-5 max-lg:px-10 max-md:px-5">
         <Component />
       </section>
     </div>

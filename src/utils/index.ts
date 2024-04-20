@@ -1,3 +1,3 @@
 export { formatNumber, counterWithFormattedNumbers } from "./helpers";
-export { chart } from "./static";
+export { chart, status_color } from "./static";
 export { $axios } from "./axios";

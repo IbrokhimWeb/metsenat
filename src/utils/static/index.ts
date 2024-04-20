@@ -28,3 +28,10 @@ export const chart = {
     },
   ],
 };
+
+export const status_color = {
+  Yangi: "#5BABF2",
+  Moderatsiyada: "#FFA445",
+  Tasdiqlangan: "#00CF83",
+  "Bekor qilingan": "#979797",
+};
