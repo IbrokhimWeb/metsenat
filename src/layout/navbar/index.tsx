@@ -32,10 +32,7 @@ const Navbar = () => {
         </NavLink>
       </section>
       <section className="flex items-center justify-center gap-5 max-md:gap-2">
-        <div
-          role="input"
-          className="w-[284px] flex items-center py-2 px-[10px] rounded-md bg-[#E8E8E8] focus-visible:outline-[#4c70ff7d] max-[1300px]:w-[250px] max-[860px]:w-[300px] max-md:w-[284px] max-md:py-1 max-sm:w-[250px]"
-        >
+        <div className="w-[284px] flex items-center py-2 px-[10px] rounded-md bg-[#E8E8E8] focus-visible:outline-[#4c70ff7d] max-[1300px]:w-[250px] max-[860px]:w-[300px] max-md:w-[284px] max-md:py-1 max-sm:w-[250px]">
           <img src="/images/search.svg" alt="Search icon" />
           <input
             type="text"
@@ -43,7 +40,10 @@ const Navbar = () => {
             className="w-full font-normal border-none px-2  bg-transparent placeholder:text-[#B1B1B8]  focus:outline-none"
           />
         </div>
-        <button className="px-10 py-2 rounded-md flex items-center gap-2 text-[#3365FC] bg-[#EDF1FD] max-sm:px-5">
+        <button
+          name="filter"
+          className="px-10 py-2 rounded-md flex items-center gap-2 text-[#3365FC] bg-[#EDF1FD] max-sm:px-5"
+        >
           <img src="/images/filter.svg" alt="" />
           <span className="max-[1300px]:hidden max-[860px]:block max-sm:hidden">
             Filter

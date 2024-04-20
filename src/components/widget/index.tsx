@@ -1,34 +1,15 @@
 import { FC, useEffect } from "react";
-import { counterWithFormattedNumbers } from "../../utils";
+import { widgets } from "../../utils/static";
+import { CustomWigetProps, counterWithFormattedNumbers } from "../../utils";
 
-interface CustomProps {
-  res: {
-    total_paid: number;
-    total_need: number;
-    total_must_pay: number;
-  };
-  index: number;
-}
-
-interface CustomWiget {
-  title: string;
-  price: "total_paid" | "total_need" | "total_must_pay";
-}
-
-const widgets: Array<CustomWiget> = [
-  { title: "Jami to‘langan summa", price: "total_paid" },
-  { title: "Jami so‘ralgan summa", price: "total_need" },
-  { title: "To‘lanishi kerak summa", price: "total_must_pay" },
-];
-
-const Widget: FC<CustomProps> = ({ index, res }) => {
+const Widget: FC<CustomWigetProps> = ({ index, res }) => {
   useEffect(
     () =>
       counterWithFormattedNumbers(
         widgets[index]?.price,
-        res ? res[widgets[index]?.price] : 0
+        res ? res[widgets[index]?.price] : 0,
       ),
-    [index, res]
+    [index, res],
   );
 
   return (

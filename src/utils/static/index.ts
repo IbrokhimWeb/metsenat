@@ -1,3 +1,5 @@
+import { CustomWiget } from "../";
+
 export const chart = {
   labels: [
     "01/01/2024",
@@ -35,3 +37,9 @@ export const status_color = {
   Tasdiqlangan: "#00CF83",
   "Bekor qilingan": "#979797",
 };
+
+export const widgets: Array<CustomWiget> = [
+  { title: "Jami to‘langan summa", price: "total_paid" },
+  { title: "Jami so‘ralgan summa", price: "total_need" },
+  { title: "To‘lanishi kerak summa", price: "total_must_pay" },
+];

@@ -1,7 +1,7 @@
-import Dashboard from "../pages/dashboard";
 import Sponsor from "../pages/sponsor";
 import Sponsors from "../pages/sponsors";
 import Students from "../pages/students";
+import Dashboard from "../pages/dashboard";
 
 export const routes = [
   {

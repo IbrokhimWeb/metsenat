@@ -1,12 +1,9 @@
 import { FC } from "react";
 import Header from "./header";
 import Navbar from "./navbar";
+import { CustomLayoutProps } from "../utils";
 
-interface CustomProps {
-  component: () => JSX.Element;
-}
-
-const Layout: FC<CustomProps> = ({ component: Component }) => {
+const Layout: FC<CustomLayoutProps> = ({ component: Component }) => {
   return (
     <div className="w-full h-screen">
       <Header />

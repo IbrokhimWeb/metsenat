@@ -1,22 +1,8 @@
-//todo Import components
 import { FC } from "react";
 import Chart, { useChart } from "../";
-import { formatNumber } from "../../../utils";
+import { MainChartProps, formatNumber } from "../../../utils";
 
-interface CustomProps {
-  title: string;
-  chart: {
-    labels: Array<string>;
-    series: Array<{
-      name: string;
-      type: string;
-      fill: string;
-      data: Array<number>;
-    }>;
-  };
-}
-
-export const MainChart: FC<CustomProps> = (props) => {
+export const MainChart: FC<MainChartProps> = (props) => {
   const { title, chart } = props;
 
   const options = useChart({
@@ -41,11 +27,9 @@ export const MainChart: FC<CustomProps> = (props) => {
   return (
     <main className="p-5 mt-10 rounded-md bg-white max-xl:mt-5 max-xl:p-3 max-lg:mx-0 max-lg:p-1">
       <section className="w-full h-[470px] p-5 max-[1300px]:h-[400px] max-[600px]:h-[300px] max-[600px]:p-3 max-[450px]:h-[250px]">
-        <div>
-          <h1 className="font-bold text-2xl text-[#2E384D] max-[600px]:text-[1rem]">
-            {title}
-          </h1>
-        </div>
+        <h1 className="font-bold text-2xl text-[#2E384D] max-[600px]:text-[1rem]">
+          {title}
+        </h1>
         <Chart
           dir="ltr"
           type="line"
