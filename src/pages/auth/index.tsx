@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/inputs";
 import { $axios, LoginState } from "../../utils";
 import { ChangeEvent, FormEvent, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -37,9 +37,9 @@ const Login = () => {
     }
   };
 
-  const handleChangeCaptcha = (value: string | null) => {
-    console.log(value);
-  };
+  // const handleChangeCaptcha = (value: string | null) => {
+  //   console.log(value);
+  // };
 
   return (
     <main className="w-full h-screen flex flex-col items-center justify-center">
@@ -68,12 +68,12 @@ const Login = () => {
           placeholder="Parol kiriting!"
           onChange={handleChange}
         />
-        <br />
+        {/* <br />
         <ReCAPTCHA
           sitekey={import.meta.env.VITE_ReCAPTCHA!}
           onChange={() => handleChangeCaptcha}
         />
-        <br />
+        <br /> */}
         <button
           type="submit"
           className="w-full py-[8px] px-[10px] mt-5 font-medium rounded-md bg-blue-300 text-white"
