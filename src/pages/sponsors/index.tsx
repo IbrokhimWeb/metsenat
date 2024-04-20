@@ -79,11 +79,9 @@ const Sponsors = () => {
         </section>
         <section className="min-w-[1200px] flex items-center justify-between my-5">
           <p>
-            <span>{res?.data?.count}</span> tadan{" "}
-            <span>{page * pageSize - pageSize}</span>
+            <span>{res?.data?.count}</span> tadan <span>{page - pageSize}</span>
             {"-"}
-            <span>{page * pageSize}</span>
-            ko‘rsatilmoqda
+            <span>{page * pageSize}</span> ko‘rsatilmoqda
           </p>
           <div className="flex items-center gap-5">
             <label className="flex items-center gap-3">
@@ -104,7 +102,7 @@ const Sponsors = () => {
               previousLabel={"<"}
               nextLabel={">"}
               breakLabel={"..."}
-              pageCount={res?.data?.count}
+              pageCount={Math.floor(res?.data?.count / pageSize)}
               pageRangeDisplayed={2}
               marginPagesDisplayed={2}
               onPageChange={onPageChange}
