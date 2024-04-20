@@ -14,7 +14,7 @@ ax.interceptors.request.use(
       Authorization: `Bearer ${localStorage.getItem("access")}`,
     },
   }),
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 );
 
 export const $axios = ax;

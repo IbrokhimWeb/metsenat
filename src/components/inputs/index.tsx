@@ -14,7 +14,7 @@ export const Input: FC<any> = (props) => {
         {title}
       </label>
       <input
-        id="title"
+        id={title}
         {...other}
         className="w-full font-normal py-[8px] px-[10px] rounded-md border border-[#e0e7ff] bg-blue-100 placeholder:text-[#2e384d64]  focus:outline-[#4c70ff7d]"
       />

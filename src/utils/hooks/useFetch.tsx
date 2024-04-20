@@ -1,15 +1,10 @@
-//todo Import packages
-import { useEffect, useState } from "react";
 import { $axios } from "../axios";
-
-interface CustomState {
-  // eslint-disable-next-line
-  res: any;
-  loading: boolean;
-}
+import { toast } from "react-toastify";
+import { ResponseState } from "../types";
+import { useEffect, useState } from "react";
 
 export const useFetch = (url: string, reload: number) => {
-  const [state, setState] = useState<CustomState>({
+  const [state, setState] = useState<ResponseState>({
     res: null,
     loading: false,
   });
@@ -19,18 +14,23 @@ export const useFetch = (url: string, reload: number) => {
 
     (async () => {
       try {
-        setState((prev: CustomState) => ({ ...prev, loading: true }));
+        setState((prev: ResponseState) => ({ ...prev, loading: true }));
         const res = await $axios.get(url, {
           signal: controller.signal,
         });
 
-        setState((prev: CustomState) => ({ ...prev, res }));
+        setState((prev: ResponseState) => ({ ...prev, res }));
 
         //!
       } catch (err: unknown) {
-        console.log(err);
+        if (err instanceof Error) {
+          const error = err as unknown as {
+            response: { data: { detail: string } };
+          };
+          toast.error(error?.response?.data?.detail);
+        }
       } finally {
-        setState((prev: CustomState) => ({ ...prev, loading: false }));
+        setState((prev: ResponseState) => ({ ...prev, loading: false }));
       }
     })();
 

@@ -16,9 +16,9 @@
   font-family: SF-Pro-Display-Bold !important;
 }
 
-input::placeholder,
 select,
 option,
+input::placeholder,
 .medium-font {
   font-family: SF-Pro-Display-Medium !important;
 }
@@ -35,12 +35,12 @@ body {
   border: 1px solid #e0e7ff;
   background-color: #e0e7ff61;
 
-  &::placeholder {
-    color: gray;
-  }
-
   &:focus {
     outline: 0.5px solid red;
+  }
+
+  &::placeholder {
+    color: gray;
   }
 
   &::-webkit-calendar-picker-indicator {
@@ -106,10 +106,10 @@ body {
 }
 
 .loader {
-  display: inline-block;
-  position: relative;
   width: 80px;
   height: 80px;
+  position: relative;
+  display: inline-block;
 
   span {
     position: absolute;
@@ -126,53 +126,53 @@ body {
 
 @keyframes AnimationLoader {
   0% {
-    top: 36px;
-    left: 36px;
     width: 0;
     height: 0;
+    top: 36px;
+    left: 36px;
     opacity: 0;
   }
   4.9% {
-    top: 36px;
-    left: 36px;
     width: 0;
     height: 0;
+    top: 36px;
+    left: 36px;
     opacity: 0;
   }
   5% {
-    top: 36px;
-    left: 36px;
     width: 0;
     height: 0;
+    top: 36px;
+    left: 36px;
     opacity: 1;
   }
   100% {
     top: 0px;
     left: 0px;
+    opacity: 0;
     width: 72px;
     height: 72px;
-    opacity: 0;
   }
 }
 
 .pagination {
-  margin: 15px auto;
   display: flex;
-  list-style: none;
   outline: none;
+  list-style: none;
+  margin: 15px auto;
 
   li {
     a {
+      height: 30px;
+      display: flex;
       padding: 0 5px;
       min-width: 30px;
-      height: 30px;
       font-size: 14px;
       font-weight: 500;
-      display: flex;
+      border-radius: 4px;
       align-items: center;
       justify-content: center;
       border: 1px solid #dfe3e8;
-      border-radius: 4px;
 
       margin: 0 5px;
       outline: none;
@@ -186,11 +186,11 @@ body {
     a,
     span,
     a:hover,
-    span:hover a:focus,
-    span:focus {
-      border-color: #3366ff;
-      color: #3366ff;
+    span:focus,
+    span:hover a:focus {
       outline: none;
+      color: #3366ff;
+      border-color: #3366ff;
     }
   }
 }
@@ -201,12 +201,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
+  margin-left: 10px;
   border-radius: 10px;
   background-color: transparent;
-  margin-left: "10px";
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3366ff;
   border-radius: 10px;
+  background: #3366ff;
 }

@@ -21,6 +21,7 @@ const Header = memo(() => {
           />
         </div>
         <button
+          name="logout"
           onClick={() => {
             localStorage.clear();
             navigate("/login");
