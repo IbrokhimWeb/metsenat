@@ -3,12 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: SF-Pro-Display;
+  font-family: SF-Pro-Display-Bold;
   src: url(/public/fonts/SF-Pro-Display-Bold.otf);
 }
 
+@font-face {
+  font-family: SF-Pro-Display-Medium;
+  src: url(/public/fonts/SF-Pro-Display-Medium.otf);
+}
+
 * {
-  font-family: SF-Pro-Display !important;
+  font-family: SF-Pro-Display-Bold !important;
+}
+
+input::placeholder {
+  font-family: SF-Pro-Display-Medium !important;
 }
 
 body {

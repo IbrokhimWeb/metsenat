@@ -1,16 +1,30 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="w-full flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-[860px]:gap-2 max-[860px]:flex-col-reverse">
       <section className="flex items-center justify-center">
-        <button className="text-[12px] px-14 py-2 rounded-l-md border border-r-0 font-medium border-[#3366ff7a] text-[#3366ff7a] max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6">
+        <NavLink
+          to={"/"}
+          style={({ isActive }) => (isActive ? {} : {})}
+          className="text-[12px] px-14 py-2 rounded-l-md border border-r-0 font-medium border-[#3366ff7a] text-[#3366ff7a] max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
+        >
           Dashboard
-        </button>
-        <button className="text-[12px] px-14 py-2 border font-medium border-[#3366ff7a] bg-blue-200 text-white max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6">
+        </NavLink>
+        <NavLink
+          to={"/sponsors"}
+          style={({ isActive }) => (isActive ? {} : {})}
+          className="text-[12px] px-14 py-2 border font-medium border-[#3366ff7a] bg-blue-200 text-white max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
+        >
           Homiylar
-        </button>
-        <button className="text-[12px] px-14 py-2 rounded-r-md border border-l-0 font-medium border-[#3366ff7a] text-[#3366ff7a] max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6">
+        </NavLink>
+        <NavLink
+          to={"/students"}
+          style={({ isActive }) => (isActive ? {} : {})}
+          className="text-[12px] px-14 py-2 rounded-r-md border border-l-0 font-medium border-[#3366ff7a] text-[#3366ff7a] max-[1300px]:px-8 max-[860px]:px-14 max-md:px-8 max-md:py-1 max-sm:px-6"
+        >
           Talabalar
-        </button>
+        </NavLink>
       </section>
       <section className="flex items-center justify-center gap-5 max-md:gap-2">
         <div
