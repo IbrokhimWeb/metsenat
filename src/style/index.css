@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: SF-Pro-Display;
+  src: url(/public/fonts/SF-Pro-Display-Bold.otf);
+}
+
+* {
+  font-family: SF-Pro-Display !important;
+} */
+
+body {
+  background-color: #f5f5f7;
+}
+
+.input {
+  width: 100%;
+  font-weight: 400;
+  padding: 14px 16px;
+  border-radius: 6px;
+  border: 1px solid #e0e7ff;
+  background-color: #e0e7ff61;
+
+  &::placeholder {
+    color: gray;
+  }
+
+  &:focus {
+    outline: 0.5px solid red;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    filter: invert(0.5);
+  }
+}
+
+.my_chart .apexcharts-canvas {
+  & .apexcharts-tooltip {
+    color: "";
+    box-shadow: "";
+    border-radius: "";
+
+    & .apexcharts-theme-light {
+      border-color: transparent;
+    }
+  }
+
+  & .apexcharts-xaxistooltip {
+    border-color: transparent;
+    color: "";
+    box-shadow: "";
+    border-radius: "";
+
+    &:before {
+      border-bottom-color: "";
+    }
+
+    &:after {
+      border-bottom-color: "";
+    }
+  }
+
+  & .apexcharts-tooltip-title {
+    text-align: center;
+    font-weight: "";
+    background-color: #000;
+    color: "";
+  }
+
+  & .apexcharts-legend {
+    padding: 0;
+  }
+
+  & .apexcharts-legend-series {
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  & .apexcharts-legend-marker {
+    margin-right: 8;
+  }
+
+  & .apexcharts-legend-text {
+    line-height: 18px;
+    text-transform: capitalize;
+  }
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loader span {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: AnimationLoader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes AnimationLoader {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
