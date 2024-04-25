@@ -1,13 +1,22 @@
 export { $axios } from "./axios";
-export { useFetch } from "./hooks/useFetch";
-export { chart, status_color } from "./static";
+export { store } from "./store";
+export { chart, status_color, DOTS } from "./static";
+
+export { usePagination } from "./hooks/usePagination";
 export { formatNumber, counterWithFormattedNumbers } from "./helpers";
+export { setSearch, setPage, setPageSize } from "./store/paramsSlice";
+export { loader, response } from "./store/responseSlice";
+
+export type { State, AppDispatch } from "./store";
 export type {
   LoginState,
   CustomWiget,
   CustomSponsor,
-  ResponseState,
   MainChartProps,
   CustomWigetProps,
   CustomLayoutProps,
+  ParamsState,
+  ResponseState,
+  ColumsState,
+  TableProps,
 } from "./types";

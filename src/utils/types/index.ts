@@ -16,12 +16,6 @@ export interface CustomWiget {
   price: "total_paid" | "total_need" | "total_must_pay";
 }
 
-export interface ResponseState {
-  // eslint-disable-next-line
-  res: any;
-  loading: boolean;
-}
-
 export interface MainChartProps {
   title: string;
   chart: {
@@ -52,4 +46,26 @@ export interface CustomSponsor {
 export interface LoginState {
   username: string;
   password: string;
+}
+
+export interface ParamsState {
+  search: string | null;
+  ordering: string | null;
+  page: number;
+  page_size: number;
+}
+
+export interface ResponseState {
+  loading: boolean;
+  // eslint-disable-next-line
+  response: any;
+}
+
+export interface ColumsState {
+  id: number;
+  Colum: () => JSX.Element;
+}
+
+export interface TableProps {
+  columns: Array<ColumsState>;
 }
