@@ -10,7 +10,7 @@ const Layout: FC<CustomLayoutProps> = ({ component: Component }) => {
         <Header />
         <Navbar />
       </div>
-      <div className="w-full h-[82vh] py-10 px-40 max-xl:py-5 max-lg:px-10 max-md:px-5">
+      <div className="w-full h-[82vh] py-5 px-40 max-xl:py-5 max-lg:px-10 max-md:px-5">
         <Component />
       </div>
     </div>

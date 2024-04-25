@@ -15,6 +15,6 @@ ReactDOM.createRoot(document.getElementById("metsenat")!).render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Provider>
+  </Provider>,
   // </StrictMode>
 );

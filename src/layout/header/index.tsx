@@ -5,7 +5,7 @@ const Header = memo(() => {
   const navigate = useNavigate();
 
   return (
-    <header className="w-full flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-md:px-10 max-sm:px-6">
+    <header className="w-full h-[9vh] flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-md:px-10 max-sm:px-6">
       <img
         src="/images/logo.svg"
         alt="Logo"

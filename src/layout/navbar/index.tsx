@@ -7,7 +7,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-[860px]:gap-2 max-[860px]:flex-col-reverse">
+    <nav className="w-full h-[9vh] flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-[860px]:gap-2 max-[860px]:flex-col-reverse">
       <section className="flex items-center justify-center">
         <NavLink
           to={"/"}

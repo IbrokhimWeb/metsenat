@@ -52,7 +52,7 @@ const Pagination: FC<PaginationProps> = (props) => {
           >
             {pageNumber}
           </li>
-        )
+        ),
       )}
       <li
         className={`pagination ${currentPage === lastPage ? "disabled" : ""}`}

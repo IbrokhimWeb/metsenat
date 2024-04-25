@@ -18,7 +18,7 @@ const Table = ({ columns }: TableProps) => {
     ({ res, params }: State) => ({
       ...res,
       ...params,
-    })
+    }),
   );
 
   const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
