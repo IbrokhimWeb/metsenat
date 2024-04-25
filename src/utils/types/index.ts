@@ -69,3 +69,10 @@ export interface ColumsState {
 export interface TableProps {
   columns: Array<ColumsState>;
 }
+
+export interface PaginationProps {
+  pageSize: number;
+  totalCount: number;
+  currentPage: number;
+  siblingCount?: number;
+}

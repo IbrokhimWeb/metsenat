@@ -23,6 +23,7 @@ export const paramsSlice = createSlice({
     },
     setPageSize: (state, action: PayloadAction<number>) => {
       state.page_size = action?.payload;
+      state.page = 1;
     },
   },
 });

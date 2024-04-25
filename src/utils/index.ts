@@ -15,6 +15,7 @@ export type {
   MainChartProps,
   CustomWigetProps,
   CustomLayoutProps,
+  PaginationProps,
   ParamsState,
   ResponseState,
   ColumsState,

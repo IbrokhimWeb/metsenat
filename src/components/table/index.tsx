@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import {
   State,
-  setPage,
   TableProps,
   setPageSize,
   formatNumber,
@@ -26,9 +25,7 @@ const Table = ({ columns }: TableProps) => {
     dispatch(setPageSize(+e.target.value));
   };
 
-  const onPageChange = (selected: number) => {
-    dispatch(setPage(selected));
-  };
+  console.log("Table");
 
   return (
     <main className="w-full h-full">
@@ -98,20 +95,7 @@ const Table = ({ columns }: TableProps) => {
               <option value="50">50</option>
             </select>
           </label>
-          {/* <ReactPaginate
-            previousLabel={"<"}
-            nextLabel={">"}
-            breakLabel={"..."}
-            pageCount={Math.floor((response?.count || 0) / page_size)}
-            pageRangeDisplayed={2}
-            marginPagesDisplayed={2}
-            onPageChange={onPageChange}
-            breakClassName="break"
-            activeClassName="active"
-            containerClassName="pagination"
-          /> */}
           <Pagination
-            onPageChange={onPageChange}
             totalCount={response?.count}
             pageSize={page_size}
             currentPage={page}
