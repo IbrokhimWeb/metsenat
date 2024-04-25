@@ -1,5 +1,4 @@
 //todo Import packages
-import { v4 } from "uuid";
 import { Suspense, lazy } from "react";
 import { ToastContainer, Slide } from "react-toastify";
 import { Routes, Route } from "react-router-dom";
@@ -36,7 +35,7 @@ function App() {
 
         {routes?.map(({ path, component }) => (
           <Route
-            key={v4()}
+            key={path}
             path={path}
             element={<Private component={component} />}
           />

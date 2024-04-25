@@ -1,5 +1,7 @@
 import { CustomWiget } from "../";
 
+export const DOTS = "...";
+
 export const chart = {
   labels: [
     "01/01/2024",

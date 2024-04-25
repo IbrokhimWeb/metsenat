@@ -5,12 +5,14 @@ import { CustomLayoutProps } from "../utils";
 
 const Layout: FC<CustomLayoutProps> = ({ component: Component }) => {
   return (
-    <div className="w-full h-screen">
-      <Header />
-      <Navbar />
-      <section className="w-full min-h-[70vh] overflow-x-hidden py-10 px-40 max-xl:py-5 max-lg:px-10 max-md:px-5">
+    <div className="w-full h-screen overflow-hidden">
+      <div className="w-full h-[18vh]">
+        <Header />
+        <Navbar />
+      </div>
+      <div className="w-full h-[82vh] py-5 px-40 max-xl:py-5 max-lg:px-10 max-md:px-5">
         <Component />
-      </section>
+      </div>
     </div>
   );
 };

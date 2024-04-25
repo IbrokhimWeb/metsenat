@@ -7,7 +7,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-[860px]:gap-2 max-[860px]:flex-col-reverse">
+    <nav className="w-full h-[9vh] flex items-center justify-between py-3 px-40 bg-white max-lg:px-20 max-[860px]:gap-2 max-[860px]:flex-col-reverse">
       <section className="flex items-center justify-center">
         <NavLink
           to={"/"}
@@ -36,15 +36,18 @@ const Navbar = () => {
           <img src="/images/search.svg" alt="Search icon" />
           <input
             type="text"
+            width={20}
+            height={20}
+            alt="Search"
             placeholder="Search"
-            className="w-full font-normal border-none px-2  bg-transparent placeholder:text-[#B1B1B8]  focus:outline-none"
+            className="font-normal border-none px-2  bg-transparent placeholder:text-[#B1B1B8] focus:outline-none"
           />
         </div>
         <button
           name="filter"
           className="px-10 py-2 rounded-md flex items-center gap-2 text-[#3365FC] bg-[#EDF1FD] max-sm:px-5"
         >
-          <img src="/images/filter.svg" alt="" />
+          <img src="/images/filter.svg" width={16} height={16} alt="Filter" />
           <span className="max-[1300px]:hidden max-[860px]:block max-sm:hidden">
             Filter
           </span>

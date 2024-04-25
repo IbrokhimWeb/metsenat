@@ -25,8 +25,8 @@ export const MainChart: FC<MainChartProps> = (props) => {
   });
 
   return (
-    <main className="p-5 mt-10 rounded-md bg-white max-xl:mt-5 max-xl:p-3 max-lg:mx-0 max-lg:p-1">
-      <section className="w-full h-[470px] p-5 max-[1300px]:h-[400px] max-[600px]:h-[300px] max-[600px]:p-3 max-[450px]:h-[250px]">
+    <main className="p-5 mt-5 rounded-md bg-white max-xl:mt-3 max-xl:p-3 max-lg:mx-0 max-lg:p-1">
+      <section className="w-full h-[470px] p-3 max-[1300px]:h-[400px] max-[600px]:h-[300px] max-[600px]:p-3 max-[450px]:h-[250px]">
         <h1 className="font-bold text-2xl text-[#2E384D] max-[600px]:text-[1rem]">
           {title}
         </h1>

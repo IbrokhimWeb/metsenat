@@ -105,6 +105,72 @@ body {
   }
 }
 
+.pagination {
+  height: 32px;
+  display: flex;
+  font-size: 14px;
+  padding: 0 10px;
+  min-width: 32px;
+  margin: auto 4px;
+  color: #1d1d1f;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfe3e8;
+  background-color: #ffffff;
+
+  &.dots:hover {
+    cursor: default;
+    background-color: #ffffff;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  &.selected {
+    color: #3366ff;
+    border-color: #3366ff;
+    pointer-events: none;
+  }
+
+  .arrow {
+    &::before {
+      content: "";
+      width: 0.4em;
+      height: 0.4em;
+      position: relative;
+      display: inline-block;
+      border-right: 0.12em solid #c4cdd5;
+      border-top: 0.12em solid #c4cdd5;
+    }
+
+    &.right {
+      transform: rotate(45deg);
+    }
+
+    &.left {
+      transform: rotate(-135deg) translate(-50%);
+    }
+  }
+
+  &.disabled {
+    opacity: 50%;
+    pointer-events: none;
+    border: 1px solid #dfe3e8;
+    background-color: #dfe3e8;
+
+    .arrow::before {
+      border-top: 0.12em solid #979797;
+      border-right: 0.12em solid #979797;
+    }
+
+    &:hover {
+      background-color: #dfe3e8;
+    }
+  }
+}
+
 .loader {
   width: 80px;
   height: 80px;
@@ -152,46 +218,6 @@ body {
     opacity: 0;
     width: 72px;
     height: 72px;
-  }
-}
-
-.pagination {
-  display: flex;
-  outline: none;
-  list-style: none;
-  margin: 15px auto;
-
-  li {
-    a {
-      height: 30px;
-      display: flex;
-      padding: 0 5px;
-      min-width: 30px;
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: 4px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #dfe3e8;
-
-      margin: 0 5px;
-      outline: none;
-      cursor: pointer;
-      color: #1d1d1f;
-      background-color: #ffffff;
-    }
-  }
-
-  .active {
-    a,
-    span,
-    a:hover,
-    span:focus,
-    span:hover a:focus {
-      outline: none;
-      color: #3366ff;
-      border-color: #3366ff;
-    }
   }
 }
 
