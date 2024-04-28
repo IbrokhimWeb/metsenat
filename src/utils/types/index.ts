@@ -76,3 +76,10 @@ export interface PaginationProps {
   currentPage: number;
   siblingCount?: number;
 }
+
+export interface PaginationState {
+  currentPage: number;
+  totalCount: number;
+  siblingCount: number;
+  pageSize: number;
+}
